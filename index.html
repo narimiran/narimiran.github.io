@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h1>Articles</h1>
+<table>
+    <col width="150">
+    <col width="550">
+    {% for post in site.posts %}
+    <tr>
+        <td>
+            <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+        </td>
+        <td>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {% if post.original-date %} [Original date: {{ post.original-date | date: "%Y-%m-%d" }}] {% endif %}
+            {% if post.lang == 'cro' %} [Croatian] {% endif %}
+            
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+<p>Subscribe
+    <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a>
+</p>

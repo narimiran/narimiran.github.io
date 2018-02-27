@@ -1,0 +1,17 @@
+title: Miran's personal site
+description: >- # this means to ignore newlines until "baseurl:"
+  Posts about programming, science, vizualizations, and my random thoughts.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: narimiran
+
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+
+sass:
+  sass_dir: _sass
+
+include: ['_pages']

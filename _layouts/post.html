@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<time>{% if page.original-date %} {{page.original-date | date: "%Y-%m-%d" }} • Updated on: {% endif %} {{ page.date | date: "%Y-%m-%d" }} {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</time>
+
+{{ content }}
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
