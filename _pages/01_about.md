@@ -25,7 +25,7 @@ I write mostly in English, but here and there some posts might have some locally
 The themes I cover depend on the things that are currently interesting to me---this can change quite often, but you can expect stuff about programming, data analysis and visualizations, and numerical modelling.
 
 English is not my mother tongue so I apologize for all the writing mistakes.
-If you find grammatical or any other mistakes in my posts, you would like give me feedback or comment, feel free to contact me.
+If you find grammatical or any other mistakes in my posts, you would like give me feedback or comment on a stuff I have written, feel free to contact me.
 
 
 
