@@ -56,7 +56,26 @@ blockquote {
     font-style: italic;
 }
 
+code {
+    font-family: $code-font;
+    font-size: 0.9em;
+    background-color:$light;
+    border-radius: 4px;
+}
 
+table{
+    border-collapse: collapse;
+}
+
+th{
+    border-bottom: 1px solid $font-color;
+    padding: 10px 20px;
+}
+
+td{
+    // border-bottom: 1px solid $font-color;
+    padding: 10px 20px;
+}
 
 .container {
     max-width: $content-width;
