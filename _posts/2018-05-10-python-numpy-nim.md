@@ -7,7 +7,7 @@ date: 2018-05-10
 
 Yesterday I've stumbled on the article [Pure Python vs NumPy vs TensorFlow Performance Comparison](https://realpython.com/numpy-tensorflow-performance/) where the author gives a performance comparison of different implementations of gradient descent algorithm for a simple linear regression example.
 
-Lately I've been experimenting with [Nim programming language](https://nim-lang.org/), which promises to offer Python-like easy to read syntax, while having C-like speeds.
+Lately I've been experimenting with the [Nim programming language](https://nim-lang.org/), which promises to offer a Python-like easy to read syntax, while having C-like speeds.
 This seemed like a nice and simple example to compare speed between Nim and Python.
 
 
@@ -16,7 +16,7 @@ This seemed like a nice and simple example to compare speed between Nim and Pyth
 
 As _everybody_ would expect, [the article has shown](https://realpython.com/numpy-tensorflow-performance/#conclusion) that the pure Python version is much slower than the other two versions, but _nobody_ would write numerical code like that.
 
-NumPy allows us to write both more readable and much faster code, as it takes an advantage of vectorised operations on NumPy arrays, and usually calls optimized C or Fortran code.
+NumPy allows us to write both more readable and much faster code, as it takes advantage of vectorised operations on NumPy arrays, and usually calls optimized C or Fortran code.
 
 The code from the original article is used without modifications, I have just re-run it on my machine (i7-970 @ 3.20 GHz) to get the base values for a later comparison:
 
@@ -49,10 +49,10 @@ const
   nEpochs = 10_000
 ```
 
-Compared to Python, in Nim all imports are written on the same line, and importing a module in Nim is analogous to `from Foo import *` in Python.
+Compared to Python, in Nim all imports are written on the same line, and importing a module in Nim is analogous to `from foo import *` in Python.
 
 We take the same seed as in the original, and we define all the needed constants. (All indented lines are part of the `const` block.)
-Nim is statically typed language, but the types can be inferred from the values.
+Nim is a statically typed language, but the types can be inferred from the values.
 
 Next we need to define vectors `x` and `d` (`x = np.linspace(0, 2, N)` and `d = 3 + 2 * x + noise` in Python), and we need to do it element by element:
 
@@ -67,7 +67,7 @@ Operator `..<` iterates _until_ the upper limit. (Operator `..` would iterate to
 
 The thing to notice here is that we cannot combine integers and floats -- `i` needs to be converted to float. (Nim has [UFCS](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax) support so `i.float` is the same as `float(i)`.)
 
-Function `randomNormal`, which gives us Gaussian distribution (`np.random.randn` in the Python version), is taken from [Arraymancer](https://mratsim.github.io/Arraymancer/), which is Nim's tensor library (still in early stage, but it is rapidly developed).
+Function `randomNormal`, which gives us a Gaussian distribution (`np.random.randn` in the Python version), is taken from [Arraymancer](https://mratsim.github.io/Arraymancer/), which is Nim's tensor library (still in early stage, but it is rapidly developed).
 
 The remaining thing to do is to define the `gradientDescent` function:
 
@@ -109,7 +109,7 @@ echo "Nim time: ", cpuTime() - start, " seconds"
 
 ## Nim results
 
-We compile the program in the [release mode](https://nim-lang.org/docs/nimc.html#additional-compilation-switches), which turns off runtime checks and turns on the optimizer, and run it:
+We compile the program in [release mode](https://nim-lang.org/docs/nimc.html#additional-compilation-switches), which turns off runtime checks and turns on the optimizer, and run it:
 
 ```
 $ nim c -d:release gradDesc.nim
@@ -135,4 +135,6 @@ Nim has managed to deliver on its promise -- for this example it offers 3x perfo
 
 &nbsp;
 
-> Source files (both .py and .nim) are available [here](https://github.com/narimiran/narimiran.github.io/tree/master/code/).
+> Discussion on [Reddit](https://www.reddit.com/r/programming/comments/8ilinf/python_vs_numpy_vs_nim/) and [Hacker News](https://news.ycombinator.com/item?id=17045230).
+>
+> Source files (both .py and .nim) are available [here](https://github.com/narimiran/narimiran.github.io/tree/master/code/python-numpy-nim).
