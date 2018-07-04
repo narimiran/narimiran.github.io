@@ -15,7 +15,7 @@ permalink: /about/
 * it says _civil engineer_ on my diploma, but I don't feel like one
 * no formal education in programming, it is a hobby of mine
 * programming languages I use (in decreasing skill level): Python, Nim, F#
-* other interests and hobbies: open source, photography, backgammon, (open street) mapping, Linux, genealogy, (LaTeX) typesetting, etc.
+* other interests and hobbies: open source, photography, backgammon, (open street) mapping, Linux, board games, disc golf, genealogy, etc.
 
 
 
@@ -34,7 +34,7 @@ If you find grammatical or any other mistakes in my posts, you would like give m
 
 * [GitHub profile](https://github.com/narimiran/)
 * [LinkedIn profile](https://www.linkedin.com/in/miran-tuhtan/)
-* miranDOTtuhtanATgmailDOTcom
+* narimiran AT disroot DOT org
 
 
 &nbsp;
