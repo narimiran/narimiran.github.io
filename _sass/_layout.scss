@@ -7,6 +7,14 @@ body {
     line-height: 2.0;
     -webkit-font-smoothing: antialiased;
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 0.9em;
+        line-height: 1.75;
+    }
+}
+
 h1,
 h2,
 h3 {
@@ -17,7 +25,7 @@ h3 {
     margin-top: 1.8em;
 }
 h1 {
-    font-size: $font-size + 0.6em;
+    font-size: 1.8em;
     a,
     a:visited {
         text-decoration: none;
@@ -25,19 +33,19 @@ h1 {
     }
 }
 h2 {
-    font-size: $font-size + 0.3em;
+    font-size: 1.4em;
 }
 blockquote {
     border-left: 4px solid $light;
     margin: 1.5em;
     padding: 0 1em;
-    font-size: $font-size - 0.2em;
+    font-size: 0.9em;
     font-style: italic;
 }
 code { // inline code
     font-family: $code-font;
-    font-size: $font-size - 0.2em;
-    background-color:$light;
+    font-size: 0.9em;
+    background-color: $light;
     border-radius: 4px;
 }
 div.highlight { // code block
@@ -67,14 +75,16 @@ time {
 
 table{
     border-collapse: collapse;
+    min-width: 80%;
+    margin: auto;
 }
 th{
     border-bottom: 1px solid $font-color;
-    padding: 10px 20px;
+    padding: 0.5em 0.25em;
 }
 td{
     // border-bottom: 1px solid $font-color;
-    padding: 10px 20px;
+    padding: 0.5em 0.25em;
 }
 
 .container {
@@ -95,11 +105,13 @@ aside {
     background: $main;
     width: 100%;
     z-index: 2;
-    box-shadow: 0px 3px 0px $light;
+    box-shadow: 0px 4px 0px $light;
     nav {
         float: left;
         max-width: $content-width;
+        width: 100%;
         margin: 0 auto;
+        text-align: right;
         ul {
             margin: 0;
             padding: 0;
@@ -110,9 +122,9 @@ aside {
                 a {
                     text-decoration: none;
                     display: block;
-                    padding: 15px 15px 15px 0px;
+                    padding: 1em 2em 1em 0em;
                     font-family: 'Open Sans', sans-serif;
-                    line-height: 15px;
+                    line-height: 1;
                     &:hover,
                     &:active {
                         background: $main;
@@ -129,8 +141,6 @@ aside {
     }
 }
 
-div.horizontalgap { // for header
-    float: left;
-    overflow: hidden;
-    width: 0px;
-  }
+div.nim-basics {
+    float: right;
+}
