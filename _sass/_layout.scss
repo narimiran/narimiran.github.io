@@ -4,28 +4,22 @@ body {
     color: $font-color;
     font-family: $font-style;
     font-size: $font-size;
-    line-height: 2.0;
+    line-height: 160%;
     -webkit-font-smoothing: antialiased;
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 0.9em;
-        line-height: 1.75;
-    }
 }
 
 h1,
 h2,
 h3 {
-    font-weight: 400;
-    color: $heading-font-color;
+    font-weight: bold;
     font-family: $heading-font;
     line-height: 1.25;
-    margin-top: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.5px;
 }
 h1 {
-    font-size: 1.8em;
+    font-size: 200%;
     a,
     a:visited {
         text-decoration: none;
@@ -33,23 +27,35 @@ h1 {
     }
 }
 h2 {
-    font-size: 1.4em;
+    font-size: 150%;
+}
+h3 {
+    font-size: 125%;
 }
 blockquote {
-    border-left: 4px solid $light;
-    margin: 1.5em;
-    padding: 0 1em;
-    font-size: 0.9em;
+    // border-left: 4px solid $light-gray;
+    box-shadow: -6px 3px 6px -3px $light-gray;
+    background-color: $light;
+    padding: 0 20px;
+    margin: 2.0em;
+    font-size: 90%;
     font-style: italic;
+    p {
+      padding: 10px 0px;
+    }
+    code {
+      font-style: normal;
+    }
 }
 code { // inline code
     font-family: $code-font;
-    font-size: 0.9em;
+    font-size: 80%;
+    letter-spacing: -0.5px;
     background-color: $light;
     border-radius: 4px;
 }
-div.highlight { // code block
-    border-radius: 8px;
+.highlight { // code block
+    padding: 6px;
 }
 a,
 a:visited {
@@ -76,15 +82,21 @@ time {
 table{
     border-collapse: collapse;
     min-width: 80%;
-    margin: auto;
+    margin: 2em auto;
+    font-size: 90%;
 }
 th{
     border-bottom: 1px solid $font-color;
     padding: 0.5em 0.25em;
 }
 td{
-    // border-bottom: 1px solid $font-color;
+    border-bottom: 2px solid $light;
     padding: 0.5em 0.25em;
+}
+sup { // footnote marks shouldn't change line-height
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
 }
 
 .container {
@@ -92,10 +104,19 @@ td{
     margin: 0 auto;
 }
 
-.center-image
-{
+.center-image {
     margin: 0 auto;
     display: block;
+}
+
+.footnotes {
+  font-size: 80%;
+  line-height: 150%;
+  margin-top: 4em;
+}
+
+article {
+  margin: 0 8px 6em 8px;
 }
 
 aside {
@@ -105,12 +126,12 @@ aside {
     background: $main;
     width: 100%;
     z-index: 2;
-    box-shadow: 0px 4px 0px $light;
+    box-shadow: 0px 2px 12px -4px $light-gray;
     nav {
         float: left;
         max-width: $content-width;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 8px;
         text-align: right;
         ul {
             margin: 0;
@@ -122,8 +143,9 @@ aside {
                 a {
                     text-decoration: none;
                     display: block;
-                    padding: 1em 2em 1em 0em;
+                    padding: 0.7em 2em 0.7em 0em;
                     font-family: 'Open Sans', sans-serif;
+                    font-size: 90%;
                     line-height: 1;
                     &:hover,
                     &:active {
@@ -144,3 +166,13 @@ aside {
 div.nim-basics {
     float: right;
 }
+
+@media screen and (max-width: $small-width) {
+    body {
+        font-size: 0.8 * $font-size;
+    }
+    main {
+        max-width: 100%;
+    }
+}
+

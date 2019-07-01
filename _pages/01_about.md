@@ -6,7 +6,7 @@ permalink: /about/
 
 
 
-# About me
+## About me
 
 * my name is Miran [read: me-run]
 * 30-something year old
@@ -20,7 +20,7 @@ permalink: /about/
 
 
 
-# About these pages
+## About these pages
 
 I write mostly in English, but here and there some posts might have some locally interesting stuff written in Croatian.
 The themes I cover depend on the things that are currently interesting to me---this can change quite often, but you can expect stuff about programming, data analysis and visualizations, and numerical modeling.
@@ -30,10 +30,9 @@ If you find grammatical or any other mistakes in my posts, you would like give m
 
 
 
-# Contacts
+## Contacts
 
 * [GitHub profile](https://github.com/narimiran/)
-* [LinkedIn profile](https://www.linkedin.com/in/miran-tuhtan/)
 * narimiran AT disroot DOT org
 
 

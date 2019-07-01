@@ -102,11 +102,6 @@ For example:
 * older age groups have become more vulnerable than before --- did the age distribution of drivers change or are the new generations safer drivers than their predecessors?
 
 
-
-
-
-&nbsp;
-
 &nbsp;
 
 > Data preparation, analysis, and visualizations were made in Python.

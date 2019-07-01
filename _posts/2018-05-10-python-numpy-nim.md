@@ -119,7 +119,6 @@ $ ./gradDesc
 Nim time: 0.226344 seconds
 ```
 
-&nbsp;
 
 Version | Time (s) | Speedup vs Python | Speedup vs NumPy
 |:---|---:|---:|---:|
@@ -127,7 +126,6 @@ Python | 34.62 | - | 0.02x
 NumPy | 0.71 | 48.76x | -
 Nim | 0.226 | 153.19x | 3.14x
 
-&nbsp;
 
 While NumPy has offered significant speedups compared to the pure Python version, Nim manages to further improve upon that, and not just marginally -- it is two orders of a magnitude faster than Python, and, what is more impressive, it is three times faster than NumPy.
 
