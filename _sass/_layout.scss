@@ -17,20 +17,20 @@ h3 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     letter-spacing: -0.5px;
-}
-h1 {
-    font-size: 200%;
     a,
     a:visited {
         text-decoration: none;
         color: $heading-font-color;
     }
 }
+h1 {
+    font-size: 200%;
+}
 h2 {
     font-size: 150%;
 }
 h3 {
-    font-size: 125%;
+    font-size: 120%;
 }
 blockquote {
     // border-left: 4px solid $light-gray;
@@ -49,13 +49,15 @@ blockquote {
 }
 code { // inline code
     font-family: $code-font;
-    font-size: 80%;
+    font-size: 90%;
     letter-spacing: -0.5px;
     background-color: $light;
     border-radius: 4px;
 }
-.highlight { // code block
+div.highlight { // code block
     padding: 6px;
+    box-shadow: -6px 3px 6px -3px $light-gray;
+    font-size: 90%;
 }
 a,
 a:visited {
