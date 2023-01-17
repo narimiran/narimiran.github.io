@@ -15,8 +15,8 @@ permalink: /about/
 * former PhD student at Faculty of Civil Engineering Rijeka
 * no formal education in programming, it was a hobby of mine, and starting from 2019 became my job
 * author of [Nim Basics](https://narimiran.github.io/nim-basics/) tutorial
-* programming languages I use (in decreasing skill level): Python, Nim, Ocaml, Racket, F#
-* other interests and hobbies: disc golf, board games, open source, photography, backgammon, bass guitar, (open street) mapping, Linux, genealogy, etc.
+* programming languages I use (in decreasing skill level): Python, Nim, Clojure, Ocaml, Racket, F#
+* other interests and hobbies: disc golf, board games, driving on curvy roads, car detailing, open source, photography, backgammon, bass guitar, (open street) mapping, Linux, genealogy, etc.
 
 
 
