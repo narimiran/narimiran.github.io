@@ -396,6 +396,34 @@ From almost 5 seconds, down to around 600 milliseconds.
 
 
 
+### Use `transduce`
+
+One of the recurring themes of AoC tasks is to `map` or `filter` some collection, and then find a sum or product of the result:
+
+```clj
+(->> xs
+     (map some-func)
+     (reduce +))
+
+(->> xs
+     (filter some-pred?)
+     (reduce *))
+```
+
+We are not interested in the sequences produced by `map` and `filter`, so it is the best to avoid them in the first place.
+It might not matter if you're doing this once, but if you are inside a nested loop, this redundancy builds up.
+The solution is to replace those constructs with `transduce`:
+
+```clj
+(transduce (map some-func) + xs)
+
+(transduce (filter some-pred?) * xs)
+```
+
+
+
+
+
 ### (Un)boxed math
 
 If you execute the following in your REPL, now every time you evaluate some function it will warn you if you're doing some boxed arithmetic:
@@ -425,6 +453,7 @@ You should, additionally, type hint the function return type too.
 
 From my limited experience, the gains are usually small, and there's no need to do this everywhere where the warning points you (it shows line and column, so it is easy to find offending operands).
 You might notice some benefits inside hot loops.
+
 
 
 
