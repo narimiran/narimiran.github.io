@@ -61,7 +61,7 @@ Not really.
 You are not limited to that.
 
 - `[1 3 9]` is a vector.
-- `{1 5 2 7}` is a map (a.k.a table, dictionary). Notice no colons (`:`), commas, or any other punctuation.
+- `{1 5 2 7}` is a map (a.k.a. table, dictionary). Notice no colons (`:`), commas, or any other punctuation.
   It has the even number of elements, where each odd element is a key.
   Since Clojure treats commas as a whitespace, I prefer to write it `{1 5 , 2 7}` or to put every key-value pair on its own line, to make it more obvious what is a key and what is a value.
   This example is an equivalent of this Python dict: `{1: 5, 2: 7}`.
@@ -93,15 +93,18 @@ It is a useful debugging tool, when we want to know the value of some internal v
 For example:
 
 ```clj
-(defn func [x]
-  (let [y (do-something x)]
-    (def y y)
+(def y 10) ; global y
+
+(defn func1 [x]
+  (let [y (do-something x)] ; local y
+    (def y-from-func1 y)    ; capture local y
     (->> y
          (map func2)
          (reduce +))))
 ```
 
-By using `(def y y)` we can now inspect the value of `y` in the REPL and use it (test it) outside that function.
+By using `(def y-from-func1 y)` we can now inspect the value of the local `y` in the REPL and use it (test it) outside that function.
+The name `y-from-func1` was chosen not to clash with the global `y`; if you are not worried about namespace pollution, you can simply do `(def y y)`.
 
 &nbsp;
 
