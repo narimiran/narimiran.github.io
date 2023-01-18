@@ -60,6 +60,9 @@ div.highlight { // code block
     box-shadow: -6px 3px 6px -3px $light-gray;
     font-size: 90%;
     margin-bottom: 1.5em;
+    code {
+      padding: 0px;
+    }
 }
 a,
 a:visited {
