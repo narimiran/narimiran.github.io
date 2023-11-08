@@ -32,7 +32,7 @@ I have experience with Lisp syntax (Racket) and functional programming (OCaml), 
 But starting a Clojure project?
 
 Lately I've been increasingly using VSCode editor (instead of my usual Neovim), so I searched for some Clojure extension and found and installed [Calva](https://calva.io).
-Calva has been a great experience, and I can recommend learning some if its [Top 10 Commands](https://calva.io/commands-top10/), which I frequently use while developing.
+Calva has been a great experience, and I can recommend learning some of its [Top 10 Commands](https://calva.io/commands-top10/), which I frequently use while developing.
 
 At the time, I didn't know about the existence of [Leiningen](https://leiningen.org), so I had some problems with connecting my project to the REPL.
 This was solved thanks to the help from [Discljord community](https://discord.gg/discljord) on Discord, who explained to me that I need to have at least a basic `deps.edn` file containing the following:
@@ -67,7 +67,7 @@ You are not limited to that.
   This example is an equivalent of this Python dict: `{1: 5, 2: 7}`.
 - `#{5 3}` is a set. Notice the `#`. (Without it, this would be a map with one key-value pair.)
 - `(fn [x] (* 5 x))` is an anonymous function.
-  You can use it as a predicate to the `map` function (not to be confused with map data structure mentioned above), e.g. `map (fn [x] (* 5 x)) xs`, where `xs` is a collection of numbers.
+  You can use it as a predicate to the `map` function (not to be confused with map data structure mentioned above), e.g. `(map (fn [x] (* 5 x)) xs)`, where `xs` is a collection of numbers.
 - `#(* 5 %)` is a short way of writing an anonymous function, and it is equivalent to the example above.
   The `%` is used instead of the argument.
   If your function takes multiple arguments, you can use `%1` for the first argument, `%2` for the second, etc.
