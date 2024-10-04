@@ -13,9 +13,9 @@ permalink: /about/
 * from Rijeka, Croatia
 * it says _civil engineer_ on my diploma, but I don't feel like one
 * former PhD student at Faculty of Civil Engineering Rijeka
-* no formal education in programming, it was a hobby of mine, and starting from 2019 became my job
+* since 2019, I'm a freelance programmer, **available for hire**
+* programming languages I use (in a decreasing skill level): Python, Nim, Clojure, Ocaml, Racket, F#
 * author of [Nim Basics](https://narimiran.github.io/nim-basics/) tutorial
-* programming languages I use (in decreasing skill level): Python, Nim, Clojure, Ocaml, Racket, F#
 * other interests and hobbies: disc golf, board games, driving on curvy roads, car detailing, open source, photography, backgammon, bass guitar, (open street) mapping, Linux, genealogy, etc.
 
 
